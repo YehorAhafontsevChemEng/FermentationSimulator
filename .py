@@ -12,7 +12,7 @@ def mu(S):
 
 def model(t, y):
     X, S, P = y
-    S = max(S, 0)           # stops S going slightly negative
+    S = max(S, 0)           
     growth = mu(S)
     dXdt = growth * X
     dSdt = -(1 / Yxs) * growth * X
