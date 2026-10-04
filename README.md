@@ -3,7 +3,6 @@
 
 A Python-based simulation engine for batch fermentation kinetics, parameter identification, and economic yield optimization. Designed to bridge bioprocess engineering principles with numerical simulation (`SciPy`).
 
-![Simulation Summary](summary_figure.png)
 
 ## Key Features
 
