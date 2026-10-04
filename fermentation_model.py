@@ -5,9 +5,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
 from scipy.optimize import least_squares
 
-# ----------------------------------------------------------------
-# 1. THE MODEL
-# ----------------------------------------------------------------
+
 DEFAULTS = dict(
     mu_max=0.4,   # 1/h    fastest possible growth rate
     Ks=0.05,      # g/L    substrate level where growth is half of max
@@ -42,9 +40,6 @@ def simulate(p, t_end=24, n=481):
     return sol.t, sol.y[0], sol.y[1], sol.y[2]
 
 
-# ----------------------------------------------------------------
-# 2. FITTING TO REAL DATA
-# ----------------------------------------------------------------
 # OD600 values read by eye off a published growth curve (approximate!).
 # The flat part at 12 h is kept because without it the fit cannot tell how much
 # substrate there was (growth that stops needs a plateau to pin down S0). Note
@@ -72,9 +67,6 @@ def fit_to_od():
     return fitted, res
 
 
-# ----------------------------------------------------------------
-# 3 + 4. WHAT-IF AND OPTIMAL STOP TIME
-# ----------------------------------------------------------------
 TURNAROUND = 4.0   # h to empty, clean and refill the vessel between runs
 
 
@@ -90,9 +82,6 @@ def best_stop_time(p, t_end=36):
     return t[i], P[i], prod[i], (t, prod)
 
 
-# ----------------------------------------------------------------
-# RUN EVERYTHING AND MAKE ONE SUMMARY FIGURE
-# ----------------------------------------------------------------
 if __name__ == "__main__":
     fig, ax = plt.subplots(2, 2, figsize=(12, 9))
 
