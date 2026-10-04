@@ -14,6 +14,11 @@ A Python-based simulation engine for batch fermentation kinetics, parameter iden
   * **Starvation & Cell Death:** Models biomass decay ($k_d$) upon substrate depletion.
 * **Parameter Estimation:** Fits non-linear kinetic parameters ($\mu_{max}$, $\tau$, $S_0$) to experimental $\text{OD}_{600}$ growth data using logarithmic residuals via `scipy.optimize.least_squares`.
 * **Process Economics & Optimization:** Evaluates vessel productivity ($\text{g/L/h}$) taking equipment turnaround time (cleaning, sterilization) into account to determine the optimal harvest point.
+* ## Experimental Data Source
+
+The parameter estimation model is calibrated against published experimental growth data for recombinant *Escherichia coli*:
+* **Source:** *Batch fermentation growth curve of recombinant E. coli clone* ($\text{OD}_{600}$ vs Time).
+* **Validation:** Used to estimate maximum specific growth rate ($\mu_{max}$), lag phase constant ($\tau$), and initial substrate concentration ($S_0$) via non-linear least squares optimization.
 
 ---
 
