@@ -54,3 +54,13 @@ $$\begin{aligned} \text{Sat} &= \frac{S}{K_s + S} \\ \text{Lag} &= 1 - e^{-t/\ta
 git clone [https://github.com/YehorAhafontsevChemEng/FermentationSimulator.git](https://github.com/YehorAhafontsevChemEng/FermentationSimulator.git)
 cd FermentationSimulator
 pip install numpy scipy matplotlib
+
+## Assumptions and limitations
+
+- **Constant conditions:** pH, temperature and oxygen are assumed constant and are not modelled.
+- **Simple kinetics:** growth follows Monod kinetics, and product follows Luedeking-Piret. Product toxicity and byproducts are not included.
+- **Batch only:** nothing is added or removed during the run (no fed-batch or continuous operation).
+- **Partial fitting:** only `mu_max`, `lag tau` and `S0` were fitted to data. `Ks`, the yields (`Yxs`, `Yps`), `alpha`, `beta` and `kd` are placeholder values, so product predictions are illustrative.
+- **Approximate data:** the OD600 points were read by eye off a published figure. The flat plateau at 12 h may be a capped reading.
+- **OD conversion:** OD is converted to g/L with a rough factor (about 0.35 g/L per OD unit), which depends on strain and instrument.
+- **Simple economics:** the "best stop time" maximises product per vessel-hour, including a fixed turnaround time. It does not include costs, prices or downstream processing.
