@@ -6,10 +6,11 @@ A Python model of batch fermentation. It simulates cell growth, substrate use an
 
 ## What it does
 
-1. **Simulates a batch culture** with three variables: biomass X, substrate S and product P (all in g/L).
-2. **Fits three parameters** (`mu_max`, lag `tau`, starting substrate `S0`) to an OD600 growth curve using `scipy.optimize.least_squares` with logarithmic residuals.
-3. **Runs a what-if comparison** of different starting substrate amounts.
-4. **Finds the best harvest time** by maximising product per vessel-hour, including a fixed turnaround time between runs.
+1. **Simulates a batch culture** with three variables: biomass (X), substrate (S) and product (P) 
+2. units: all in g/L.
+3. **Fits three parameters** (`mu_max`, lag `tau`, starting substrate `S0`) to an OD600 growth curve using `scipy.optimize.least_squares` with logarithmic residuals.
+4. **Runs a what-if comparison** of different starting substrate amounts.
+5. **Finds the best harvest time** by maximising product per vessel-hour, including a fixed turnaround time between runs.
 
 ## Model
 
