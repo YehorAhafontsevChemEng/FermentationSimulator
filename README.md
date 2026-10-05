@@ -57,7 +57,7 @@ Harvest-time analysis (baseline parameters, 4 h turnaround): the best moment to 
 
 OD600 values were read by eye off a published growth curve of a recombinant *E. coli* batch culture, so they are approximate.
 
-Source: *[add the paper or page the figure came from]*
+Source: *https://www.researchgate.net/figure/Fig-7-The-batch-fermentation-a-The-growth-curve-of-recombinant-E-coli-clone-OD_fig2_331840511*
 
 | Time (h) | OD600 |
 |---|---|
