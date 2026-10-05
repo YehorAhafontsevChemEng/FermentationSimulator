@@ -32,10 +32,10 @@ $$
 \end{aligned}
 $$
 
-1. **Biomass:**
+1. **Change in Biomass is modeled by:**
    $$\frac{dX}{dt} = (\mu - \text{Death}) \cdot X$$
 
-2. **Product:**
+2. **Change in Product is modeled by:**
    $$\frac{dP}{dt} = (\alpha \cdot \mu + \beta \cdot \text{Sat}) \cdot X$$
 
 3. **Substrate** (used to make new cells and product; dying cells do not return substrate):
