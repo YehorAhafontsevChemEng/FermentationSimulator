@@ -38,7 +38,7 @@ $$
 2. **Change in Product is modeled by:**
    $$\frac{dP}{dt} = (\alpha \cdot \mu + \beta \cdot \text{Sat}) \cdot X$$
 
-3. **Substrate** (used to make new cells and product; dying cells do not return substrate):
+3. **Change in Substrate is modeled by** (used to make new cells and product; dying cells do not return substrate):
    $$\frac{dS}{dt} = -\frac{1}{Y_{x/s}} \cdot \mu \cdot X - \frac{1}{Y_{p/s}} \cdot \frac{dP}{dt}$$
 
 ## Results
